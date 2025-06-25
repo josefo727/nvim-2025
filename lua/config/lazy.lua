@@ -7,6 +7,13 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
+vim.cmd([[
+  highlight SmoothCursor guifg=#FFD700
+  highlight SmoothCursorRed guifg=#FF5F5F
+  highlight SmoothCursorOrange guifg=#FFAF5F
+  highlight SmoothCursorYellow guifg=#FFFF5F
+]])
+
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
